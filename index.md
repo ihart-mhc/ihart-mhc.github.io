@@ -10,7 +10,7 @@ title: iHart MHC | Home
  in the direction that a person is walking. It allows hallways to come alive, leading passerby to 
  interact with their surroundings. They can become the controller for a computer game by stepping onto a 
  floor projection, or they can stretch their hands up towards a collection of flowers hanging from the 
- ceiling--quite possibly expecting no response at all--only to be surprised when music plays in response. 
+ ceiling, quite possibly expecting no response at all, only to be surprised when music plays in response. 
  The possibilities are nearly unlimited, and are bound only by the developer’s imagination.
 
             
