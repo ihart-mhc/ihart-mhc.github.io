@@ -1,6 +1,4 @@
 ---
-layout: default
-title: iHart MHC | Home
 ---
 
 # iHart MHC
