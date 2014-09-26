@@ -1,4 +1,5 @@
 ---
+title: The Team
 ---
 
 # The Team

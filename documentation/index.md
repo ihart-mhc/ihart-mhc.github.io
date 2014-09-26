@@ -1,8 +1,11 @@
 ---
+title: Documentation
 ---
 
 # Documentation
 
-This is a page with information about iHart.
+This is a page with information about iHart&#39;s many aspects and how to use them.
 
-There might be [a link](/) to frequently asked questions or other useful bits of information.
+* * *
+
+### [Frequently asked questions](faq.html)
