@@ -9,3 +9,5 @@ files. [Here](http://daringfireball.net/projects/markdown/syntax) and
 learn. Static pages are set up using the [named folders with index files](
 http://jekyllrb.com/docs/pages/#named-folders-containing-index-html-files) method; non-index pages
  have [permalinks specified for them](http://jekyllrb.com/docs/frontmatter/).
+
+Before modifying the website, please skim [this wiki page](https://github.com/ihart-mhc/ihart-mhc.github.io/wiki/How-to-work-with-the-website) for a quick introduction on how to edit, add, and remove things.
