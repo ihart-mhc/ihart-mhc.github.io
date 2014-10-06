@@ -19,15 +19,15 @@ The iHart project aims to go beyond creating interactive hallways that are fun a
 The iHart project uses a camera-projector system and the Adobe Flash application development environment to create an interactive system that can be easily installed into a hallway and an intuitive development environment that can be used to create new applications.
 
 ### Levels of Interaction
-* User  
+* **User**  
   Consumer with minimal tech comfort (e.g. a high school science teacher)  
   Usage of pre-compiled software  
   
-* Beginner Developer  
+* **Beginner Developer**  
   Undergraduate student with intro computer science class  
   Application development
   
-* Developer  
+* **Developer**  
   Undergraduate student majoring in CS  
   iHart software development
 

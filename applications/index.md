@@ -4,26 +4,27 @@ title: Application Development
 ---
 
 # Application Development
-* [Current Applications](##Examples of Current iHart Applications)
-* [Guides](##Creating iHart Applications)
+* [Current Applications](#examples-of-current-ihart-applications)
+* [Guides](#creating-ihart-applications)
 * [Source Code](https://github.com/ihart-mhc/ihart)
 
 ## Examples of Current iHart Applications
 Bellow, you can find a list of previously created iHart applications for inspiration. The source code for all of these applications can be downloaded from [GitHub](https://github.com/ihart-mhc/ihart).
 
 ### Butterfly
-In this applications butterflies follow the motion of the user and cluster together.
+In this application, butterflies follow the motion of the user and cluster together.
 ![Screenshot of the Butterfly Application](pics/butterflies.png)
 
 ### Flowers
-In this applications flowers grow around the areas where movement is detected.
+In this application, flowers grow around the areas where movement is detected.
 ![Screenshot of the Flowers Application](pics/flowers.png)
 
 ### Mario Jump
+In this application, the user can play as Mario.
 ![Screenshot of the MarioJump Application](pics/marioJump.png)
 
 ### Snow Scene
-In this application the snowflakes fall around the areas outlined by user\'s motion.
+In this application, the snowflakes fall around the areas outlined by user\'s motion.
 ![Screenshot of the Snows Scene Application](pics/snowScene.png)
 
 ### Piano
