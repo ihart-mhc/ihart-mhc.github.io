@@ -1,5 +1,25 @@
+/** see http://paletton.com/#uid=5341a0klSKo8YXKgoV8qeEjxez1 for the colors in use. **/
+
+h1,h2,h3,h4,h5,h6 {
+    color: #9178E4;
+}
+
+nav.navbar.navbar-default {
+    background-color: #B2F7DB;
+    border-color: #24C584;
+}
+
+a {
+    color: #9178E4;
+}
+
+pre {
+    background-color: #B2F7DB;
+}
+
 body {
     padding-top: 50px;
+    padding-bottom: 50px;
 }
 
 img {
