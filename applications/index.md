@@ -13,7 +13,7 @@ Bellow, you can find a list of previously created iHart applications for inspira
 
 ### Butterfly
 In this applications butterflies follow the motion of the user and cluster together.
-![Screenshot of the Butterfly Application](pics/butterfly.png)
+![Screenshot of the Butterfly Application](pics/butterflies.png)
 
 ### Flowers
 In this applications flowers grow around the areas where movement is detected.
