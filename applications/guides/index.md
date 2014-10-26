@@ -31,6 +31,13 @@ Save and re-publish your application, and you shouldn\'t get the above error any
 
 ![Screenshot of actionscript source path](img/actionscript-source-path.png)
 
+
+### Other errors
+
+More can be found [here](https://sites.google.com/a/mtholyoke.edu/the-care-and-keeping-of-ihart/developer-resources/troubleshooting)
+
+They will be re-documented here later.
+
 # Creating iHart Applications
 To create an iHart program proceed as you would when creating a Flash game or interactive scene. 
 Prepare your program by creating an interactive scene or game in flash and saving it in .fla file, 
