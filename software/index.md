@@ -2,6 +2,7 @@
 title: Software
 ---
 
-# Software Development
+# How to use iHart
 
-This is a page with information about iHart&#39;s ongoing development.
+
+## [Known issues](/software/errors)
