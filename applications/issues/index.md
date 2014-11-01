@@ -46,10 +46,10 @@ then specify the location of your iHart folder. Now your error should be fixed.
 ### Adobe Flash CC
 Open the `.fla` file associated with the application, and go to **File -> Publish Settings**.
 
-Under Publish, choose **Flash (.swf)** and scroll down to **Local Playback Security**,
-and choose *Access network only** from the dropdown menu.
+Under Publish, choose **Flash (`.swf`)** and scroll down to **Local Playback Security**,
+and choose **Access network only** from the dropdown menu.
 
-![Screenshot of the .swf file settings in Flash](img/placeholder.png)
+![Screenshot of the .swf file settings in Flash](img/swf-file-settings.png)
 
 Save and re-publish your application, and you shouldn\'t get the above error anymore.
 
@@ -63,6 +63,11 @@ If you\'re on a Mac or a machine running OSX, try republishing in the
 
 ## Other errors
 
-More can be found [here](https://sites.google.com/a/mtholyoke.edu/the-care-and-keeping-of-ihart/developer-resources/troubleshooting)
+Older documentation can be found [here](https://sites.google.com/a/mtholyoke.edu/the-care-and-keeping-of-ihart/developer-resources/troubleshooting).
 
-They will be re-documented here later.
+There may be other issues not listed here that appear on [the GitHub issue queue](https://github.com/ihart-mhc/ihart/issues).
+
+
+If you have been using iHart and come upon an error not listed here or on GitHub, 
+please make use of [the GitHub issue queue on the public iHart repository](https://github.com/ihart-mhc/ihart/issues)
+to notify the maintainers of iHart.
