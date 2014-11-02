@@ -9,7 +9,7 @@ title: Software
 ### Starting window 
 
 When the program starts, it shows a starting screen that allows you to choose your camera.
- If the computer only has access to one camera (built-in or external), it'll be index 0.
+ If the computer only has access to one camera (built-in or external), it\'ll be index 0.
   Otherwise, the possible indexes will be 0 through (Number of Cameras -1). 
   To start the rest of the program, just drag the start program slider to 1.
   
