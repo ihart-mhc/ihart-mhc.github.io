@@ -22,11 +22,11 @@
 
 <body class="container {{ page.title | slugify }}">
 
-<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+<nav class="navbar navbar-default navbar-fixed-top not-app-list" role="navigation">
     <div class="container">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#ihart-navbar">
             <span class="sr-only">Toggle navigation</span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
@@ -36,12 +36,32 @@
         </div>
         
         <div class="collapse navbar-collapse" id="ihart-navbar">
-            <ul class="nav navbar-nav">
+            <ul class="nav navbar-nav not-app-list">
                 <li><a href="/about">About</a></li>
                 <li><a href="/ihart">Installation</a></li>
-                <li><a href="/applications">Application Development</a></li>
+                <li class="dropdown">
+                	<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                	Application Development <span class="caret"></span></a>
+                	<ul class="dropdown-menu not-app-list" role="menu">
+                		<li><a href="/applications">Current Applications</a></li>
+                		<li><a href="/applications/guides">Guides</a></li>
+                		<li><a href="/applications/issues">Troubleshooting</a></li>
+                		<li class="divider"></li>
+                		<li><a href="//github.com/ihart-mhc/ihart/tree/master/pyHartLibrary/flash/ihart/demo">
+                		Source Code</a></li>
+                	</ul>
+                </li>
                 <li><a href="/team">The Team</a></li>
-                <li><a href="/software">Software Development</a></li>
+                <li class="dropdown">
+                	<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                	Software Development<span class="caret"></span></a>
+                	<ul class="dropdown-menu not-app-list" role="menu">
+                		<li><a href="/software">iHart Software</a></li>
+                		<li><a href="/software/issues">Troubleshooting</a></li>
+                		<li class="divider"></li>
+                		<li><a href="//github.com/ihart-mhc/ihart">Source Code</a></li>
+                	</ul>
+                </li>
             </ul>
         </div>
     </div>
