@@ -19,6 +19,7 @@ nav.navbar.navbar-default {
     color: #160256;
 }
 
+<<<<<<< Updated upstream
 .navbar-default .navbar-nav>.open>a,
 .navbar-default .navbar-nav>.open>a:hover,
 .navbar-default .navbar-nav>.open>a:focus {
@@ -31,6 +32,12 @@ nav.navbar.navbar-default {
 }
 
 /* Other stuff */
+
+#navbar-logo-img {
+    width: 5em;
+    position: relative;
+    top: -5px;
+}
 
 a {
     color: #9178E4;
@@ -45,6 +52,12 @@ body {
     padding-top: 50px;
     padding-bottom: 50px;
     background-color: #F1FFF9;
+}
+
+@media (max-width: 991px) and (min-width: 768px) {
+    body {
+        padding-top: 100px;
+    }
 }
 
 /* All pages except about page have small images.*/
