@@ -25,7 +25,7 @@ I have been Chemistry 101 and Chemistry 201 TA for the past 3 years. I love teac
 
 
 ##Kayla Nguyen 
-![Kayla](https://scontent-b.xx.fbcdn.net/hphotos-xfp1/v/t1.0-9/10168228_943001505712472_7539954137971268993_n.jpg?oh=1ea6220535d4008fbac41bf160fccb5f&oe=555595BF =200x200)
+![Kayla](https://lh4.googleusercontent.com/-imhQYj46v2Q/VPzvBwEsWjI/AAAAAAAAAGQ/WybJ4r8Mej4/s200/2014_12_31.jpg "2014_12_31.jpg")
 
 [Linkedin](linkedin.com/in/kaylanguyen95) | [Github](github.com/KaylaNguyen) | [Robotics Portfolio](sites.google.com/a/mtholyoke.edu/cs-243-spring-15---nguye27k/)
 
