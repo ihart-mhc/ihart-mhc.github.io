@@ -15,7 +15,7 @@ sensing motion, try the [troubleshooting suggestions here](/applications/issues)
 
 # Creating iHart Applications
 
-This guide is also available with images as a [PDF file](Making_Your_Own_iHart_Application.pdf). For sample code checkout the HelloWorld application available on [GitHub] (https://github.com/ihart-mhc/ihart/tree/master/ApplicationsLibrary/flash/ihart/demo/HelloWorld).
+This guide is also available with images as a [PDF file](Making_Your_Own_iHart_Application.pdf). For sample code checkout the HelloWorld application available on [GitHub](https://github.com/ihart-mhc/ihart/tree/master/ApplicationsLibrary/flash/ihart/demo/HelloWorld).
 
 *Note*: throughout this demo, \"DemoApplication\" will be whatever name you 
 gave your `.as` and `.fla` files.
