@@ -5,6 +5,7 @@ title: Software
 # How to use iHart
 
 [Known issues](/software/issues)
+
 [All existing server versions](https://github.com/ihart-mhc/ihart/releases) -- the latest release is the one with the highest number.
 
 ### Starting window 
