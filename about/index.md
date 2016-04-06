@@ -15,6 +15,14 @@ through which we can introduce computer science to the public in a fun and inter
 Interactive exhibits have been successfully installed in a range of locations including museums, 
 airports and schools for various purposes from amusement through information dispersal to community building.
 
+While commercial systems with similar functions do exist, 
+their cost is prohibitive for widespread adoption of the technology. 
+The iHart project requires only an **inexpensive web camera and a projector** to create an 
+**interactive environment on any surface**. 
+The result is an unobtrusive, but highly engaging experience for anyone walking nearby. 
+Adobe Flash allows students to **quickly develop interactive applications**, 
+achieving a polished final look **without requiring prior background in programming or computer science**.
+
 The iHart project aims to go beyond creating interactive hallways that are fun and interesting to walk through. 
 Its goals are to attract the attention of the students who pass by and to increase their interest in computer science and technology. 
 The iHart project also provides inexperienced programmers with the opportunity to be able to create dynamic applications with rewarding graphics and functionality. 
@@ -47,12 +55,12 @@ There are three iHart setup variants:
 
 
 ### Technical Workflow
-![iHart Technical Workflow](pics/TechSketch.png)  
 The iHart system consists of two parts \- a server and a client. 
 The server uses OpenCV to monitor the camera feed for motion. 
 The client triggers CVEvents based on the information it receives from the server. 
 The iHart applications create an instance of the client and listen to the CVEvents, 
 which they can respond to as they would  to a MouseEvent.
+![iHart Technical Workflow](pics/TechSketch.png)  
 
 ### Application Development
 The iHart project hides all of the intricacies of computer vision and socket communication 
@@ -62,12 +70,3 @@ The iHart project creates an open source SDK that offers access to the latest co
 technology by using the OpenCV library. Building on this underlining structure, 
 iHart provides an API for the development of Flash applications. 
 This API uses an event architecture which allows it to remain consistent with the traditional mouse and keyboard interaction, so that students can quickly learn how to use this new development environment.
-
-### iHart Strengths
-While commercial systems with similar functions do exist, 
-their cost is prohibitive for widespread adoption of the technology. 
-The iHart project requires only an **inexpensive web camera and a projector** to create an 
-**interactive environment on any surface**. 
-The result is an unobtrusive, but highly engaging experience for anyone walking nearby. 
-Adobe Flash allows students to **quickly develop interactive applications**, 
-achieving a polished final look **without requiring prior background in programming or computer science**.

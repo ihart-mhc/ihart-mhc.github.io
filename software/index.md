@@ -8,6 +8,23 @@ title: Software
 
 [All existing server versions](https://github.com/ihart-mhc/ihart/releases) -- the latest release is the one with the highest number.
 
+## How iHart works
+iHart consists of two parts: the server and the client. 
+ 
+The server uses opencv to monitor a camera feed for motion and faces (collectively called Blobs).
+ It creates a server socket with a local address and a port number 5024, and accepts all incoming connections.
+  These connections are from the client side--one connection per running iHart Application.
+   The server creates a String representation of its data and sends it to all of its connections. 
+
+The client creates a socket and connects to the server socket.
+ When it receives a message, it parses the data and triggers a CVEvent if there are any Blobs in the AreaOfInterest it is monitoring. 
+
+iHart Applications create an instance of the iHart Client and listen to CVEvents,
+ which they can then respond to as they might to a MouseEvent!
+  This makes it easy for students and other programmers begin creating iHart Applications, 
+  because the structure is familiar and natural to them. 
+  iHart hides all of the intricacies of computer vision and socket communication.
+
 ### Starting window 
 
 When the program starts, it shows a starting screen that allows you to choose your camera.
@@ -87,21 +104,4 @@ but because of the setup they\'re standing relatively close to each other).
 
 Increasing **blur value** can reduce noise by blurring the video image more. 
 
-Increase **blob size** will enlarge areas of detected motion, making them more likely to overlap each other.
-
-## iHart Explained
-iHart consists of two parts: the server and the client. 
- 
-The server uses opencv to monitor a camera feed for motion and faces (collectively called Blobs).
- It creates a server socket with a local address and a port number 5024, and accepts all incoming connections.
-  These connections are from the client side--one connection per running iHart Application.
-   The server creates a String representation of its data and sends it to all of its connections. 
-
-The client creates a socket and connects to the server socket.
- When it receives a message, it parses the data and triggers a CVEvent if there are any Blobs in the AreaOfInterest it is monitoring. 
-
-iHart Applications create an instance of the iHart Client and listen to CVEvents,
- which they can then respond to as they might to a MouseEvent!
-  This makes it easy for students and other programmers begin creating iHart Applications, 
-  because the structure is familiar and natural to them. 
-  iHart hides all of the intricacies of computer vision and socket communication. 
+Increase **blob size** will enlarge areas of detected motion, making them more likely to overlap each other. 

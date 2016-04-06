@@ -17,7 +17,7 @@ and then the **folder icon** that will let you \"Browse To Path\".
 
 ![Screenshot of advanced actionscript settings](img/advanced-actionscript-settings.png)
 
-Browse to the **Applications -> flash** folder, and click **Choose** to add it as a source path.
+Browse to the **client -> library -> flash** folder, and click **Choose** to add it as a source path.
 Save and re-publish your application, and you shouldn\'t get the above error anymore.
 
 ![Screenshot of actionscript source path](img/actionscript-source-path.png)

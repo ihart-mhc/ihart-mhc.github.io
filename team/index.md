@@ -5,7 +5,13 @@ title: The Team
 iHart Development Team
 =====================
 
-##Barsha Shrestha
+## Sarah Robinson
+
+[Github](https://github.com/robinsonsarah01)
+
+# Past Team Members
+
+## Barsha Shrestha
 
 ![Barsha](https://lh3.googleusercontent.com/VlVTVp67muPpMMFYxS4ZPrQALszTROoGBrTQXwhSLw=s200 "Screen Shot 2015-02-18 at 4.17.24 PM.png")
 
@@ -24,7 +30,7 @@ I have been Chemistry 101 and Chemistry 201 TA for the past 3 years. I love teac
 ----------
 
 
-##Kayla Nguyen 
+## Kayla Nguyen 
 ![Kayla](https://lh4.googleusercontent.com/-imhQYj46v2Q/VPzvBwEsWjI/AAAAAAAAAGQ/WybJ4r8Mej4/s200/2014_12_31.jpg "2014_12_31.jpg")
 
 [Linkedin](linkedin.com/in/kaylanguyen95)  &#124;  [Github](github.com/KaylaNguyen)  &#124;  [Robotics Portfolio](sites.google.com/a/mtholyoke.edu/cs-243-spring-15---nguye27k/)
@@ -41,7 +47,7 @@ Kayla Nguyen is a freshman at Mount Holyoke College, planning to major in Comput
 ----------
 
 
-##Yavneeka Patel
+## Yavneeka Patel
 
 ![Yavneeka](https://lh5.googleusercontent.com/-0gA5vL-KHPM/VOUDghwR1GI/AAAAAAAAAE8/widog6wJ0lg/s200/Screen+Shot+2015-02-18+at+4.25.48+PM.png "Screen Shot 2015-02-18 at 4.25.48 PM.png")
 
@@ -57,7 +63,7 @@ Hello, my name is Yavneeka Patel and I’m a Computer Science and Economics doub
  
 ----------------------
 
-##Amna Aftab 
+## Amna Aftab 
 ![Amna](https://lh4.googleusercontent.com/-a0A2I9hELhk/VOUG9s1Il2I/AAAAAAAAAFQ/r5Xk9Kim9tY/s200/Amna_pic.jpg "Amna_pic.jpg")
 
 [Github](github.com/aaftab23a) &#124; [Linkedin](https://www.linkedin.com/pub/amna-aftab/91/149/8)
@@ -73,7 +79,7 @@ I am a sophomore at Mount Holyoke College majoring in Computer Science and Mathe
 
 --------------------------
 
-##Miriam Cherayil 
+## Miriam Cherayil 
 ![Miriam](https://lh6.googleusercontent.com/-WYGFUAFpKr0/VPzrxzbW6dI/AAAAAAAAAF4/5C2u6ZDNoEA/s200/IMG_20140929_144805.jpg "IMG_20140929_144805.jpg")
 
 

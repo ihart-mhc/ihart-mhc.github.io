@@ -4,18 +4,18 @@ title: Application Development
 
 # Running iHart Applications
 
-First, run the iHart application. A full explanation of the software can be found [here](/software).
+First, run the iHart software. A full explanation of the software can be found [here](/software).
 
 To run an application, navigate to the folder containing that application\'s files, 
 then run the `.swf` file (OSX or Windows), or the `.app` file (OSX). 
-The demo applications are in \"Applications -> flash -> ihart -> demo\".
+The current applications are in \"client -> apps\".
 
 If the applications won\'t run, you\'re getting errors, or it seems like the application isn\'t
 sensing motion, try the [troubleshooting suggestions here](/applications/issues).
 
 # Creating iHart Applications
 
-This guide is also available with images as a [PDF file](Making_Your_Own_iHart_Application.pdf). For sample code checkout the HelloWorld application available on [GitHub](https://github.com/ihart-mhc/ihart/tree/master/ApplicationsLibrary/flash/ihart/demo/HelloWorld).
+This guide is also available with images as a [PDF file](Making_Your_Own_iHart_Application.pdf). For sample code checkout the HelloWorld application available on [GitHub](https://github.com/ihart-mhc/ihart/tree/master/client/sample/HelloWorld).
 
 *Note*: throughout this demo, \"DemoApplication\" will be whatever name you 
 gave your `.as` and `.fla` files.
@@ -59,7 +59,7 @@ with them.-->
 * Adobe Flash CS6 
 * webcam
 * speakers (for iHart sounds)
-* decent-sized display(for iHart display)
+* decent-sized display (for iHart display)
 * projector aimed at wall or floor (for iHart projection)
 
 ## Setup
