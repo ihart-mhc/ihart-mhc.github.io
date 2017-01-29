@@ -8,7 +8,7 @@
 <td valign=bottom>&nbsp;<br>
 <font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong>cvServer</strong></big></big></font></td
 ><td align=right valign=bottom
-><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:///C:/users/sarah/projects/ihart/server/src/cvserver.py">c:\users\sarah\projects\ihart\server\src\cvserver.py</a></font></td></tr></table>
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a></font></td></tr></table>
     <p><tt>The&nbsp;iHart&nbsp;server&nbsp;uses&nbsp;the&nbsp;library&nbsp;openCV&nbsp;to&nbsp;detect&nbsp;motion&nbsp;and&nbsp;faces&nbsp;in&nbsp;a&nbsp;video&nbsp;feed.<br>
 It&nbsp;then&nbsp;edits&nbsp;the&nbsp;data,&nbsp;combining&nbsp;the&nbsp;motion&nbsp;ares&nbsp;to&nbsp;make&nbsp;them&nbsp;more&nbsp;representative&nbsp;of<br>
 the&nbsp;actual&nbsp;motion&nbsp;(without&nbsp;this,&nbsp;motion&nbsp;causes&nbsp;many&nbsp;small&nbsp;blobs&nbsp;around&nbsp;the&nbsp;edges),&nbsp;and<br>
@@ -38,7 +38,7 @@ simply&nbsp;change&nbsp;the&nbsp;position&nbsp;of&nbsp;the&nbsp;trackbar.<br>
 <tr bgcolor="#aa55cc">
 <td colspan=3 valign=bottom>&nbsp;<br>
 <font color="#ffffff" face="helvetica, arial"><big><strong>Modules</strong></big></font></td></tr>
-    
+
 <tr><td bgcolor="#aa55cc"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
 <td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><a href="argparse.html">argparse</a><br>
 <a href="cv2.html">cv2</a><br>
@@ -52,7 +52,7 @@ simply&nbsp;change&nbsp;the&nbsp;position&nbsp;of&nbsp;the&nbsp;trackbar.<br>
 <tr bgcolor="#ee77aa">
 <td colspan=3 valign=bottom>&nbsp;<br>
 <font color="#ffffff" face="helvetica, arial"><big><strong>Classes</strong></big></font></td></tr>
-    
+
 <tr><td bgcolor="#ee77aa"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
 <td width="100%"><dl>
 <dt><font face="helvetica, arial"><a href="cvServer.html#AreaOfInterest">AreaOfInterest</a>
@@ -66,7 +66,7 @@ simply&nbsp;change&nbsp;the&nbsp;position&nbsp;of&nbsp;the&nbsp;trackbar.<br>
 <tr bgcolor="#ffc8d8">
 <td colspan=3 valign=bottom>&nbsp;<br>
 <font color="#000000" face="helvetica, arial"><a name="AreaOfInterest">class <strong>AreaOfInterest</strong></a></font></td></tr>
-    
+
 <tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
 <td colspan=2><tt>Stores&nbsp;the&nbsp;starting&nbsp;(leftX,&nbsp;topY)&nbsp;and&nbsp;ending&nbsp;(rightX,&nbsp;bottomY)&nbsp;coordinates<br>
 of&nbsp;an&nbsp;area&nbsp;of&nbsp;interest.<br>&nbsp;</tt></td></tr>
@@ -109,7 +109,7 @@ Data and other attributes defined here:<br>
 <tr bgcolor="#ffc8d8">
 <td colspan=3 valign=bottom>&nbsp;<br>
 <font color="#000000" face="helvetica, arial"><a name="Blob">class <strong>Blob</strong></a></font></td></tr>
-    
+
 <tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
 <td colspan=2><tt>Stores&nbsp;the&nbsp;starting&nbsp;(leftX,&nbsp;topY)&nbsp;and&nbsp;ending&nbsp;(rightX,&nbsp;bottomY)&nbsp;coordinates&nbsp;of<br>
 either&nbsp;an&nbsp;area&nbsp;of&nbsp;motion,&nbsp;or&nbsp;a&nbsp;face.&nbsp;Performs&nbsp;slight&nbsp;analysis&nbsp;of&nbsp;the&nbsp;coordinates<br>
@@ -196,7 +196,7 @@ Data and other attributes defined here:<br>
 <tr bgcolor="#ffc8d8">
 <td colspan=3 valign=bottom>&nbsp;<br>
 <font color="#000000" face="helvetica, arial"><a name="Data">class <strong>Data</strong></a></font></td></tr>
-    
+
 <tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
 <td colspan=2><tt>Stores&nbsp;and&nbsp;controls&nbsp;the&nbsp;data&nbsp;for&nbsp;the&nbsp;server;&nbsp;deals&nbsp;with&nbsp;formatting&nbsp;the&nbsp;data&nbsp;to<br>
 send&nbsp;over&nbsp;the&nbsp;server&nbsp;socket,&nbsp;and&nbsp;with&nbsp;updating&nbsp;the&nbsp;GUI&nbsp;display.<br>&nbsp;</tt></td></tr>
@@ -438,7 +438,7 @@ Data and other attributes defined here:<br>
 <tr bgcolor="#ffc8d8">
 <td colspan=3 valign=bottom>&nbsp;<br>
 <font color="#000000" face="helvetica, arial"><a name="Server">class <strong>Server</strong></a></font></td></tr>
-    
+
 <tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
 <td colspan=2><tt>Runs&nbsp;the&nbsp;program&nbsp;by&nbsp;searching&nbsp;for&nbsp;motion&nbsp;and&nbsp;faces,&nbsp;updating&nbsp;the&nbsp;GUI,&nbsp;and&nbsp;sending&nbsp;information<br>
 to&nbsp;any&nbsp;programs&nbsp;listening&nbsp;to&nbsp;the&nbsp;server&nbsp;socket&nbsp;(in&nbsp;<a href="#SocketHandler">SocketHandler</a>).<br>&nbsp;</tt></td></tr>
@@ -532,7 +532,7 @@ Data and other attributes defined here:<br>
 <tr bgcolor="#ffc8d8">
 <td colspan=3 valign=bottom>&nbsp;<br>
 <font color="#000000" face="helvetica, arial"><a name="SocketHandler">class <strong>SocketHandler</strong></a></font></td></tr>
-    
+
 <tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
 <td colspan=2><tt>Manages&nbsp;a&nbsp;non-blocking&nbsp;server&nbsp;socket:&nbsp;searches&nbsp;for&nbsp;incoming&nbsp;connections&nbsp;(checkIncomingConnections)<br>
 and&nbsp;sends&nbsp;messages&nbsp;to&nbsp;all&nbsp;found&nbsp;connections&nbsp;(sendInformation).<br>&nbsp;</tt></td></tr>
@@ -573,7 +573,7 @@ Data and other attributes defined here:<br>
 <tr bgcolor="#eeaa77">
 <td colspan=3 valign=bottom>&nbsp;<br>
 <font color="#ffffff" face="helvetica, arial"><big><strong>Functions</strong></big></font></td></tr>
-    
+
 <tr><td bgcolor="#eeaa77"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
 <td width="100%"><dl><dt><a name="-resource_path"><strong>resource_path</strong></a>(resource)</dt><dd><tt>Utility&nbsp;method&nbsp;to&nbsp;get&nbsp;absolute&nbsp;path&nbsp;to&nbsp;a&nbsp;resource<br>
 &nbsp;(sometimes&nbsp;the&nbsp;current&nbsp;directory,&nbsp;sometimes&nbsp;the&nbsp;temp&nbsp;directory).<br>
