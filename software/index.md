@@ -8,7 +8,13 @@ title: Software
 
 [All existing server versions](https://github.com/ihart-mhc/ihart/releases) -- the latest release is the one with the highest number.
 
-[Recently generated cvServer.py documentation](/software/cvServer.html)
+Recently generated Python documentation documentation (for the server source code):
+	- [Server](/software/server.html)
+	- [Data](/software/data.html)
+	- [AreaOfInterest](/software/area_of_interest.html)
+	- [Blob](/software/blob.html)
+	- [SocketHandler](/software/socket_handler.html)
+	- [Utility](/software/utility.html)
 
 ## How iHart works
 iHart consists of two parts: the server and the client.

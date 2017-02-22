@@ -1,0 +1,270 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module data</title>
+</head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong>data</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:///C:/users/sarah/projects/ihart/server/src/data.py">c:\users\sarah\projects\ihart\server\src\data.py</a></font></td></tr></table>
+    <p><tt>Responsible&nbsp;for:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;Storing&nbsp;data&nbsp;for&nbsp;the&nbsp;server<br>
+&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;Formating&nbsp;Blob&nbsp;data&nbsp;into&nbsp;strings&nbsp;(that&nbsp;are&nbsp;sent&nbsp;via&nbsp;the&nbsp;SocketHandler&nbsp;to&nbsp;clients)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;Updating&nbsp;the&nbsp;GUI</tt></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#aa55cc">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Modules</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#aa55cc"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><a href="cv2.html">cv2</a><br>
+</td><td width="25%" valign=top><a href="json.html">json</a><br>
+</td><td width="25%" valign=top><a href="sys.html">sys</a><br>
+</td><td width="25%" valign=top></td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ee77aa">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Classes</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#ee77aa"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl>
+<dt><font face="helvetica, arial"><a href="data.html#Data">Data</a>
+</font></dt></dl>
+ <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="Data">class <strong>Data</strong></a></font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>Stores&nbsp;and&nbsp;controls&nbsp;the&nbsp;data&nbsp;for&nbsp;the&nbsp;server;&nbsp;deals&nbsp;with&nbsp;formatting&nbsp;the&nbsp;data&nbsp;to<br>
+send&nbsp;over&nbsp;the&nbsp;server&nbsp;socket,&nbsp;and&nbsp;with&nbsp;updating&nbsp;the&nbsp;GUI&nbsp;display.<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+<dl><dt><a name="Data-__init__"><strong>__init__</strong></a>(self, cameraIndex)</dt><dd><tt>Starts&nbsp;communication&nbsp;with&nbsp;the&nbsp;specified&nbsp;camera&nbsp;by&nbsp;getting&nbsp;a&nbsp;VideoCapture&nbsp;instance<br>
+from&nbsp;openCV,&nbsp;but&nbsp;does&nbsp;not&nbsp;store&nbsp;an&nbsp;image&nbsp;from&nbsp;the&nbsp;video&nbsp;feed&nbsp;yet.<br>
+@param&nbsp;cameraIndex:&nbsp;The&nbsp;index&nbsp;of&nbsp;the&nbsp;camera&nbsp;to&nbsp;communicate&nbsp;with<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(if&nbsp;there&nbsp;is&nbsp;only&nbsp;one&nbsp;camera,&nbsp;it&nbsp;will&nbsp;always&nbsp;be&nbsp;index&nbsp;0)<br>
+@return:&nbsp;none</tt></dd></dl>
+
+<dl><dt><a name="Data-addAreaOfInterest"><strong>addAreaOfInterest</strong></a>(self, leftX, rightX, topY, bottomY)</dt><dd><tt>Creates&nbsp;a&nbsp;new&nbsp;AreaOfInterest&nbsp;with&nbsp;the&nbsp;given&nbsp;data&nbsp;and&nbsp;adds&nbsp;it&nbsp;to&nbsp;interestList.<br>
+@param&nbsp;leftX:&nbsp;The&nbsp;starting&nbsp;x&nbsp;coordinate&nbsp;of&nbsp;the&nbsp;area&nbsp;of&nbsp;interest.<br>
+@param&nbsp;rightX:&nbsp;The&nbsp;ending&nbsp;x&nbsp;coordinate&nbsp;of&nbsp;the&nbsp;area&nbsp;of&nbsp;interest.<br>
+@param&nbsp;topY:&nbsp;The&nbsp;starting&nbsp;y&nbsp;coordinate&nbsp;of&nbsp;the&nbsp;area&nbsp;of&nbsp;interest.<br>
+@param&nbsp;bottomY:&nbsp;The&nbsp;starting&nbsp;y&nbsp;coordinate&nbsp;of&nbsp;the&nbsp;area&nbsp;of&nbsp;interest.<br>
+@return:&nbsp;none</tt></dd></dl>
+
+<dl><dt><a name="Data-createAreaData"><strong>createAreaData</strong></a>(self, interestArea)</dt><dd><tt>Creates&nbsp;an&nbsp;information&nbsp;string&nbsp;containing&nbsp;all&nbsp;the&nbsp;data&nbsp;of&nbsp;the&nbsp;given&nbsp;AreaOfInterest<br>
+(the&nbsp;data&nbsp;for&nbsp;all&nbsp;the&nbsp;areas&nbsp;of&nbsp;motion&nbsp;within&nbsp;the&nbsp;interest&nbsp;area,&nbsp;and&nbsp;then&nbsp;for&nbsp;all<br>
+the&nbsp;faces&nbsp;within&nbsp;the&nbsp;interest&nbsp;area).&nbsp;All&nbsp;coordinates&nbsp;are&nbsp;updated&nbsp;if&nbsp;the&nbsp;blob&nbsp;is&nbsp;only<br>
+partially&nbsp;within&nbsp;the&nbsp;area&nbsp;of&nbsp;interest.&nbsp;All&nbsp;coordinates&nbsp;are&nbsp;scaled&nbsp;according&nbsp;to&nbsp;scalingWidth<br>
+and&nbsp;scalingHeight&nbsp;(the&nbsp;dimensions&nbsp;of&nbsp;the&nbsp;client&nbsp;program)&nbsp;Calling&nbsp;this&nbsp;method&nbsp;in&nbsp;no&nbsp;way<br>
+changes&nbsp;the&nbsp;state&nbsp;of&nbsp;memory:&nbsp;all&nbsp;lists&nbsp;are&nbsp;unchanged&nbsp;after&nbsp;the&nbsp;call&nbsp;(any&nbsp;changes&nbsp;made&nbsp;to<br>
+coordinates&nbsp;only&nbsp;effect&nbsp;the&nbsp;output&nbsp;string:&nbsp;no&nbsp;Blob&nbsp;will&nbsp;have&nbsp;its&nbsp;fields&nbsp;changed).<br>
+&nbsp;<br>
+The&nbsp;area&nbsp;string&nbsp;is&nbsp;formatted&nbsp;as&nbsp;follows:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"Faces":&nbsp;[&nbsp;&lt;face&nbsp;information&gt;,&nbsp;&lt;face&nbsp;information&gt;,&nbsp;...&nbsp;],<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"Shells":&nbsp;[&nbsp;&lt;shell&nbsp;information&gt;,&nbsp;&lt;shell&nbsp;information&gt;,&nbsp;...&nbsp;]<br>
+&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+&nbsp;<br>
+&lt;shell&nbsp;(motion)&nbsp;information&gt;&nbsp;and&nbsp;&lt;face&nbsp;information&gt;&nbsp;are&nbsp;both&nbsp;formatted&nbsp;the&nbsp;same,<br>
+since&nbsp;they&nbsp;both&nbsp;represent&nbsp;rectangles&nbsp;of&nbsp;detected&nbsp;motion.&nbsp;The&nbsp;format&nbsp;is&nbsp;as<br>
+follows:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;[&nbsp;leftX,&nbsp;topY,&nbsp;width,&nbsp;height&nbsp;]<br>
+We&nbsp;use&nbsp;a&nbsp;list&nbsp;since&nbsp;JSON&nbsp;does&nbsp;not&nbsp;use&nbsp;tuples.<br>
+&nbsp;<br>
+@param&nbsp;interestArea:&nbsp;the&nbsp;AreaOfInterest&nbsp;that&nbsp;the&nbsp;string&nbsp;is&nbsp;being&nbsp;created&nbsp;for.<br>
+@return:&nbsp;the&nbsp;formatted&nbsp;message&nbsp;string.</tt></dd></dl>
+
+<dl><dt><a name="Data-createGUI"><strong>createGUI</strong></a>(self)</dt><dd><tt>Create&nbsp;the&nbsp;GUI&nbsp;for&nbsp;cvServer:&nbsp;video&nbsp;feed&nbsp;window,&nbsp;motion&nbsp;window,&nbsp;and&nbsp;settings&nbsp;window.&nbsp;Set&nbsp;the<br>
+video&nbsp;window&nbsp;to&nbsp;listen&nbsp;to&nbsp;mouse&nbsp;events,&nbsp;and&nbsp;add&nbsp;all&nbsp;the&nbsp;trackbars&nbsp;to&nbsp;the&nbsp;settings&nbsp;window.<br>
+@return:&nbsp;none</tt></dd></dl>
+
+<dl><dt><a name="Data-createInformationString"><strong>createInformationString</strong></a>(self)</dt><dd><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Creates&nbsp;an&nbsp;information&nbsp;string&nbsp;to&nbsp;send&nbsp;to&nbsp;all&nbsp;of&nbsp;the&nbsp;client&nbsp;connections&nbsp;held&nbsp;by&nbsp;SocketHandler.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The&nbsp;string&nbsp;contains&nbsp;each&nbsp;area&nbsp;of&nbsp;interest.&nbsp;For&nbsp;each&nbsp;area&nbsp;of&nbsp;interest,&nbsp;every&nbsp;blob&nbsp;of&nbsp;detected<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;motion&nbsp;that&nbsp;is&nbsp;within&nbsp;that&nbsp;area&nbsp;is&nbsp;included,&nbsp;and&nbsp;then&nbsp;each&nbsp;face&nbsp;that&nbsp;is&nbsp;within&nbsp;that&nbsp;area.&nbsp;All<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;coordinates&nbsp;are&nbsp;updated&nbsp;if&nbsp;the&nbsp;blob&nbsp;is&nbsp;only&nbsp;partially&nbsp;within&nbsp;the&nbsp;area&nbsp;of&nbsp;interest.&nbsp;All&nbsp;coordinates<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;are&nbsp;scaled&nbsp;according&nbsp;to&nbsp;scalingWidth&nbsp;and&nbsp;scalingHeight&nbsp;(the&nbsp;dimensions&nbsp;of&nbsp;the&nbsp;client&nbsp;program)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Calling&nbsp;this&nbsp;method&nbsp;in&nbsp;no&nbsp;way&nbsp;changes&nbsp;the&nbsp;state&nbsp;of&nbsp;memory:&nbsp;all&nbsp;lists&nbsp;are&nbsp;unchanged&nbsp;after&nbsp;the<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;call&nbsp;(any&nbsp;changes&nbsp;made&nbsp;to&nbsp;coordinates&nbsp;only&nbsp;effect&nbsp;the&nbsp;output&nbsp;string:&nbsp;no&nbsp;Blob&nbsp;will&nbsp;have&nbsp;its<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;fields&nbsp;changed).<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The&nbsp;format&nbsp;of&nbsp;the&nbsp;string&nbsp;itself&nbsp;is&nbsp;as&nbsp;follows&nbsp;(spaces&nbsp;added&nbsp;for&nbsp;readability):<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[&nbsp;&lt;area&nbsp;information&gt;,&nbsp;&lt;area&nbsp;information&gt;,&nbsp;...&nbsp;]<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;This&nbsp;repeats&nbsp;until&nbsp;the&nbsp;string&nbsp;ends&nbsp;with&nbsp;"<br>
+ "<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(if&nbsp;you&nbsp;are&nbsp;viewing&nbsp;in&nbsp;html,&nbsp;the&nbsp;string&nbsp;ends&nbsp;with&nbsp;"\&nbsp;n&nbsp;\&nbsp;0"&nbsp;if&nbsp;you&nbsp;remove&nbsp;the&nbsp;spaces.)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The&nbsp;index&nbsp;of&nbsp;the&nbsp;&lt;area&nbsp;information&gt;&nbsp;corresponds&nbsp;to&nbsp;the&nbsp;number&nbsp;of&nbsp;the&nbsp;area&nbsp;of&nbsp;interest.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;If&nbsp;there&nbsp;are&nbsp;no&nbsp;areas&nbsp;of&nbsp;interest,&nbsp;an&nbsp;empty&nbsp;string&nbsp;is&nbsp;returned.<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;area&nbsp;information&gt;&nbsp;is&nbsp;formatted&nbsp;as&nbsp;follows:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"Faces":&nbsp;[&nbsp;&lt;face&nbsp;information&gt;,&nbsp;&lt;face&nbsp;information&gt;,&nbsp;...&nbsp;],<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"Shells":&nbsp;[&nbsp;&lt;shell&nbsp;information&gt;,&nbsp;&lt;shell&nbsp;information&gt;,&nbsp;...&nbsp;]<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;shell&nbsp;(motion)&nbsp;information&gt;&nbsp;and&nbsp;&lt;face&nbsp;information&gt;&nbsp;are&nbsp;both&nbsp;formatted&nbsp;the&nbsp;same,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;since&nbsp;they&nbsp;both&nbsp;represent&nbsp;rectangles&nbsp;of&nbsp;detected&nbsp;motion.&nbsp;The&nbsp;format&nbsp;is&nbsp;as<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;follows:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[&nbsp;leftX,&nbsp;topY,&nbsp;width,&nbsp;height&nbsp;]<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;We&nbsp;use&nbsp;a&nbsp;list&nbsp;since&nbsp;JSON&nbsp;does&nbsp;not&nbsp;use&nbsp;tuples.<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Several&nbsp;examples:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[&nbsp;{&nbsp;"Faces":&nbsp;[],&nbsp;"Shells":&nbsp;[]&nbsp;},&nbsp;{&nbsp;"Faces":&nbsp;[],&nbsp;"Shells":&nbsp;[]&nbsp;}&nbsp;]<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;No&nbsp;motion&nbsp;blobs&nbsp;or&nbsp;faces&nbsp;were&nbsp;contained&nbsp;in&nbsp;either&nbsp;area&nbsp;of&nbsp;interest.<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[&nbsp;{&nbsp;"Faces":&nbsp;[],&nbsp;"Shells":&nbsp;[&nbsp;[&nbsp;260,&nbsp;136,&nbsp;332,&nbsp;200]&nbsp;]&nbsp;},<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;"Faces":&nbsp;[],&nbsp;"Shells":&nbsp;[&nbsp;[&nbsp;135,&nbsp;0,&nbsp;415,&nbsp;400&nbsp;]&nbsp;]&nbsp;}&nbsp;]<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;One&nbsp;motion&nbsp;blob&nbsp;was&nbsp;in&nbsp;one&nbsp;area&nbsp;of&nbsp;interest,&nbsp;and&nbsp;one&nbsp;was&nbsp;in&nbsp;the&nbsp;other.<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[&nbsp;{&nbsp;"Faces":&nbsp;[&nbsp;[&nbsp;63,&nbsp;138,&nbsp;639,&nbsp;213&nbsp;]&nbsp;],&nbsp;"Shells":&nbsp;[&nbsp;[&nbsp;0,&nbsp;0,&nbsp;214,&nbsp;630&nbsp;]&nbsp;]&nbsp;},<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;"Faces":&nbsp;[],&nbsp;"Shells":&nbsp;[&nbsp;[&nbsp;0,&nbsp;20,&nbsp;428,&nbsp;105&nbsp;]&nbsp;]&nbsp;}&nbsp;]<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Area&nbsp;0&nbsp;had&nbsp;a&nbsp;motion&nbsp;blob&nbsp;and&nbsp;a&nbsp;face,&nbsp;and&nbsp;Area&nbsp;1&nbsp;had&nbsp;a&nbsp;different&nbsp;motion&nbsp;blob&nbsp;and&nbsp;no&nbsp;faces.<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;@return:&nbsp;the&nbsp;formatted&nbsp;message&nbsp;string.</tt></dd></dl>
+
+<dl><dt><a name="Data-drawAreasOfInterest"><strong>drawAreasOfInterest</strong></a>(self)</dt><dd><tt>Draw&nbsp;all&nbsp;areas&nbsp;of&nbsp;interest.<br>
+@return:</tt></dd></dl>
+
+<dl><dt><a name="Data-drawFaces"><strong>drawFaces</strong></a>(self)</dt><dd><tt>Draw&nbsp;all&nbsp;the&nbsp;faces.<br>
+@return:&nbsp;none</tt></dd></dl>
+
+<dl><dt><a name="Data-drawMotion"><strong>drawMotion</strong></a>(self)</dt><dd><tt>Draw&nbsp;all&nbsp;the&nbsp;areas&nbsp;of&nbsp;motion.<br>
+@return:&nbsp;none</tt></dd></dl>
+
+<dl><dt><a name="Data-editBounds"><strong>editBounds</strong></a>(self, blob, interestArea)</dt><dd><tt>Determines&nbsp;whether&nbsp;the&nbsp;given&nbsp;Blob&nbsp;is&nbsp;within&nbsp;the&nbsp;given&nbsp;AreaOfInterest.&nbsp;If&nbsp;blob&nbsp;is&nbsp;outside&nbsp;of<br>
+interestArea,&nbsp;returns&nbsp;None.&nbsp;If&nbsp;blob&nbsp;is&nbsp;fully&nbsp;within&nbsp;interestArea,&nbsp;returns&nbsp;blob.&nbsp;If&nbsp;blob&nbsp;is<br>
+only&nbsp;partially&nbsp;within&nbsp;interestArea,&nbsp;returns&nbsp;a&nbsp;new&nbsp;Blob,&nbsp;cropped&nbsp;to&nbsp;only&nbsp;the&nbsp;portion&nbsp;within&nbsp;the<br>
+interestArea.&nbsp;Calling&nbsp;this&nbsp;method&nbsp;in&nbsp;no&nbsp;way&nbsp;changes&nbsp;the&nbsp;state&nbsp;of&nbsp;blob,&nbsp;interestArea,&nbsp;or&nbsp;any<br>
+other&nbsp;memory&nbsp;outside&nbsp;of&nbsp;this&nbsp;method&nbsp;and&nbsp;its&nbsp;return.<br>
+&nbsp;<br>
+@param&nbsp;blob:&nbsp;the&nbsp;Blob&nbsp;to&nbsp;test&nbsp;for&nbsp;presence&nbsp;within&nbsp;interestArea.<br>
+@param&nbsp;interestArea:&nbsp;the&nbsp;AreaOfInterest&nbsp;to&nbsp;look&nbsp;for&nbsp;blob&nbsp;within.<br>
+@return:&nbsp;an&nbsp;instance&nbsp;of&nbsp;Blob&nbsp;if&nbsp;blob&nbsp;is&nbsp;within&nbsp;interestArea;&nbsp;None&nbsp;otherwise.</tt></dd></dl>
+
+<dl><dt><a name="Data-getAreaOfInterest"><strong>getAreaOfInterest</strong></a>(self, index)</dt><dd><tt>Returns&nbsp;the&nbsp;area&nbsp;of&nbsp;interest&nbsp;at&nbsp;the&nbsp;specified&nbsp;interest.<br>
+@param&nbsp;index:&nbsp;the&nbsp;index&nbsp;to&nbsp;retrieve.<br>
+@return:&nbsp;the&nbsp;specified&nbsp;AreaOfInterest&nbsp;instance.</tt></dd></dl>
+
+<dl><dt><a name="Data-mouseClicked"><strong>mouseClicked</strong></a>(self, event, x, y, flags, extraParameter)</dt><dd><tt>Responds&nbsp;to&nbsp;left&nbsp;mouse&nbsp;click&nbsp;(cv2.EVENT_LBUTTONDOWN),&nbsp;mouse&nbsp;move/drag&nbsp;(cv2.EVENT_MOUSEMOVE),<br>
+and&nbsp;mouse&nbsp;release&nbsp;(cv2.EVENT_LBUTTONUP)&nbsp;to&nbsp;create&nbsp;an&nbsp;AreaOfInterest.&nbsp;Allows&nbsp;the&nbsp;user&nbsp;to&nbsp;drag<br>
+in&nbsp;any&nbsp;direction&nbsp;to&nbsp;create&nbsp;the&nbsp;AreaOfInterest,&nbsp;and&nbsp;does&nbsp;not&nbsp;create&nbsp;the&nbsp;AreaOfInterest&nbsp;if&nbsp;it<br>
+is&nbsp;less&nbsp;than&nbsp;a&nbsp;certain&nbsp;size&nbsp;(at&nbsp;which&nbsp;point&nbsp;the&nbsp;box&nbsp;on&nbsp;the&nbsp;window&nbsp;will&nbsp;be&nbsp;drawn&nbsp;in&nbsp;red).<br>
+Responds&nbsp;to&nbsp;right&nbsp;mouse&nbsp;click&nbsp;(cv2.EVENT_RBUTTONDOWN)&nbsp;by&nbsp;removing&nbsp;an&nbsp;area&nbsp;of&nbsp;interest.<br>
+@param&nbsp;event:&nbsp;the&nbsp;mouse&nbsp;event.<br>
+@param&nbsp;x:&nbsp;the&nbsp;x&nbsp;coordinate&nbsp;of&nbsp;the&nbsp;mouse.<br>
+@param&nbsp;y:&nbsp;the&nbsp;y&nbsp;coordinate&nbsp;of&nbsp;the&nbsp;mouse.<br>
+@param&nbsp;flags:&nbsp;unused&nbsp;(present&nbsp;for&nbsp;correct&nbsp;function&nbsp;signature)<br>
+@param&nbsp;extraParameter:&nbsp;unused&nbsp;(present&nbsp;for&nbsp;correct&nbsp;function&nbsp;signature)<br>
+@return:&nbsp;none</tt></dd></dl>
+
+<dl><dt><a name="Data-resetAreas"><strong>resetAreas</strong></a>(self)</dt><dd><tt>Deletes&nbsp;all&nbsp;the&nbsp;current&nbsp;areas&nbsp;of&nbsp;interest.<br>
+@return:&nbsp;none</tt></dd></dl>
+
+<dl><dt><a name="Data-updateGUI"><strong>updateGUI</strong></a>(self)</dt><dd><tt>Displays&nbsp;the&nbsp;current&nbsp;captured&nbsp;image&nbsp;(the&nbsp;most&nbsp;recent)&nbsp;on&nbsp;the&nbsp;video&nbsp;window.<br>
+@return:</tt></dd></dl>
+
+<dl><dt><a name="Data-updateTrackbars"><strong>updateTrackbars</strong></a>(self, x)</dt><dd><tt>Responds&nbsp;to&nbsp;movement&nbsp;of&nbsp;the&nbsp;trackbars&nbsp;by&nbsp;updating&nbsp;the&nbsp;appropriate&nbsp;settings.<br>
+@param&nbsp;x:&nbsp;unused&nbsp;(present&nbsp;for&nbsp;correct&nbsp;signature)<br>
+@return:&nbsp;none</tt></dd></dl>
+
+<dl><dt><a name="Data-updateVideo"><strong>updateVideo</strong></a>(self)</dt><dd><tt>Updates&nbsp;current&nbsp;video&nbsp;capture,&nbsp;and&nbsp;flips&nbsp;it&nbsp;horizontally&nbsp;if&nbsp;flipHorizontal&nbsp;is&nbsp;currently&nbsp;enabled.<br>
+@return:&nbsp;none</tt></dd></dl>
+
+<dl><dt><a name="Data-updateVideoAndGUI"><strong>updateVideoAndGUI</strong></a>(self)</dt><dd><tt>Updates&nbsp;the&nbsp;current&nbsp;image&nbsp;from&nbsp;the&nbsp;video&nbsp;feed&nbsp;and&nbsp;displays&nbsp;it.<br>
+@return:&nbsp;none</tt></dd></dl>
+
+<hr>
+Data and other attributes defined here:<br>
+<dl><dt><strong>average</strong> = None</dl>
+
+<dl><dt><strong>blurTrackbar</strong> = 'blur value'</dl>
+
+<dl><dt><strong>blurValue</strong> = 3</dl>
+
+<dl><dt><strong>creatingAreaOfInterest</strong> = False</dl>
+
+<dl><dt><strong>difference</strong> = None</dl>
+
+<dl><dt><strong>dilateKernel</strong> = None</dl>
+
+<dl><dt><strong>dilateTrackbar</strong> = 'increase blob size'</dl>
+
+<dl><dt><strong>dilationValue</strong> = 0</dl>
+
+<dl><dt><strong>faceList</strong> = []</dl>
+
+<dl><dt><strong>facesEnabled</strong> = False</dl>
+
+<dl><dt><strong>facesTrackbar</strong> = 'enable faces'</dl>
+
+<dl><dt><strong>flipHorizontal</strong> = False</dl>
+
+<dl><dt><strong>flipTrackbar</strong> = 'flip horizontally'</dl>
+
+<dl><dt><strong>gWindow</strong> = 'settings'</dl>
+
+<dl><dt><strong>hWindow</strong> = 'help window'</dl>
+
+<dl><dt><strong>height</strong> = 180</dl>
+
+<dl><dt><strong>helpImage</strong> = 'mainHelp.png'</dl>
+
+<dl><dt><strong>helpOpen</strong> = False</dl>
+
+<dl><dt><strong>helpTrackbar</strong> = 'help?'</dl>
+
+<dl><dt><strong>holeList</strong> = []</dl>
+
+<dl><dt><strong>iHartHeight</strong> = 180</dl>
+
+<dl><dt><strong>iHartWidth</strong> = 240</dl>
+
+<dl><dt><strong>interestList</strong> = []</dl>
+
+<dl><dt><strong>mWindow</strong> = 'motion'</dl>
+
+<dl><dt><strong>mergeDistance</strong> = 0.3</dl>
+
+<dl><dt><strong>mergeTrackbar</strong> = 'merge within distance'</dl>
+
+<dl><dt><strong>motionEnableTrackbar</strong> = 'enable motion'</dl>
+
+<dl><dt><strong>motionEnabled</strong> = True</dl>
+
+<dl><dt><strong>motionThreshold</strong> = 20</dl>
+
+<dl><dt><strong>motionTrackbar</strong> = 'motion threshold'</dl>
+
+<dl><dt><strong>noiseKernel</strong> = None</dl>
+
+<dl><dt><strong>noiseReductionValue</strong> = 0</dl>
+
+<dl><dt><strong>noiseTrackbar</strong> = 'reduce noise'</dl>
+
+<dl><dt><strong>quitTrackbar</strong> = 'quit'</dl>
+
+<dl><dt><strong>referenceShot</strong> = None</dl>
+
+<dl><dt><strong>scalingHeight</strong> = 500</dl>
+
+<dl><dt><strong>scalingWidth</strong> = 800</dl>
+
+<dl><dt><strong>shellList</strong> = []</dl>
+
+<dl><dt><strong>vWindow</strong> = 'server'</dl>
+
+<dl><dt><strong>video</strong> = None</dl>
+
+<dl><dt><strong>videoCapture</strong> = None</dl>
+
+<dl><dt><strong>width</strong> = 240</dl>
+
+<dl><dt><strong>workingAreaOfInterest</strong> = None</dl>
+
+</td></tr></table></td></tr></table>
+</body></html>
