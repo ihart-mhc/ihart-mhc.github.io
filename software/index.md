@@ -10,12 +10,12 @@ title: Software
 
 Recently generated Python documentation documentation (for the server source code):
 
-	- [Server](/software/server.html)
-	- [Data](/software/data.html)
-	- [AreaOfInterest](/software/area_of_interest.html)
-	- [Blob](/software/blob.html)
-	- [SocketHandler](/software/socket_handler.html)
-	- [Utility](/software/utility.html)
+- [Server](/software/server.html)
+- [Data](/software/data.html)
+- [AreaOfInterest](/software/area_of_interest.html)
+- [Blob](/software/blob.html)
+- [SocketHandler](/software/socket_handler.html)
+- [Utility](/software/utility.html)
 
 ## How iHart works
 iHart consists of two parts: the server and the client.
