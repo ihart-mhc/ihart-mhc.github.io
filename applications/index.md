@@ -4,7 +4,7 @@ title: Applications
 
 # Application Development
 * [Current Applications](#examples-of-current-ihart-applications)
-* [Guides](guides)
+* [Application Development](development)
 * [Source Code](https://github.com/ihart-mhc/ihart)
 
 ## Examples of Current iHart Applications
@@ -33,4 +33,4 @@ The user can play the piano by creating motion in front of the proper keys.
 ### Fireworks
 Fireworks explode around the areas where movement is detected.
 ![Screenshot of the Fireworks Application](img/fireworks.png)
- 
+
