@@ -11,7 +11,7 @@ title: Java Application Development
 
 The full exported Javadocs for the iHart Java client library are available [here](doc).
 
-This guide is also available as a [PDF](TODO).
+This guide is also available as a [PDF file](CreatinganiHartApplicationJava.pdf).
 
 # Setup
 First, make sure you have downloaded the latest version of the iHart project from [this website](/ihart)

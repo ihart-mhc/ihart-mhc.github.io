@@ -16,12 +16,15 @@ To run an application, navigate to the folder containing that application\'s fil
 The current applications are in \"client -> apps\".
 
 **Flash applications:**
+
 From the application's folder, run the `.swf` file (OSX or Windows), or the `.app` file (OSX).
 
 *Note: Flash iHart applications will only run with server versions <= 2.3, as the Flash client library is being deprecated.*
 
+
 **Java applications:**
-*Coming soon*
+
+See the [Java application development guide](/applications/development/java/) section on running Java applications.
 
 If the applications won\'t run, you\'re getting errors, or it seems like the application isn\'t
 sensing motion, try the [troubleshooting suggestions here](/applications/issues).
