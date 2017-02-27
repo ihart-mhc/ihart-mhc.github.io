@@ -3,12 +3,31 @@ title: Applications
 ---
 
 # Application Development
+* [Running iHart Applications](#running-ihart-applications)
 * [Current Applications](#examples-of-current-ihart-applications)
 * [Application Development](development)
 * [Source Code](https://github.com/ihart-mhc/ihart)
 
+# Running iHart Applications
+
+First, run the iHart software. A full explanation of the software can be found [here](/software).
+
+To run an application, navigate to the folder containing that application\'s files.
+The current applications are in \"client -> apps\".
+
+**Flash applications:**
+From the application's folder, run the `.swf` file (OSX or Windows), or the `.app` file (OSX).
+
+*Note: Flash iHart applications will only run with server versions <= 2.3, as the Flash client library is being deprecated.*
+
+**Java applications:**
+*Coming soon*
+
+If the applications won\'t run, you\'re getting errors, or it seems like the application isn\'t
+sensing motion, try the [troubleshooting suggestions here](/applications/issues).
+
 ## Examples of Current iHart Applications
-Bellow is a partial list of iHart applications. The source code for all of these applications can be downloaded from [GitHub](https://github.com/ihart-mhc/ihart).
+Bellow is a partial list of iHart applications. All of these applications (including source code) can be downloaded from [GitHub](https://github.com/ihart-mhc/ihart).
 
 ### Butterfly
 Butterflies follow the motion of the user and cluster together.
