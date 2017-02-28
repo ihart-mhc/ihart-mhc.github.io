@@ -8,7 +8,7 @@ which is not supported by the Flash client library.
 
 # Creating iHart Applications
 
-This guide is also available with images as a [PDF file](Making_Your_Own_iHart_Application.pdf). For sample code checkout the HelloWorld application available on [GitHub](https://github.com/ihart-mhc/ihart/tree/master/client/sample/HelloWorld).
+For sample code checkout the HelloWorld application available on [GitHub](https://github.com/ihart-mhc/ihart/tree/master/client/sample/HelloWorld).
 
 *Note*: throughout this demo, \"DemoApplication\" will be whatever name you
 gave your `.as` and `.fla` files.
