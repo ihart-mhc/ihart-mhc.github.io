@@ -1,0 +1,56 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module cv_event_data</title>
+</head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong>cv_event_data</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href="ihart.html">index</a></font></td></tr></table>
+    <p><tt>Collects&nbsp;information&nbsp;about&nbsp;detected&nbsp;motion&nbsp;and&nbsp;faces.</tt></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ee77aa">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Classes</strong></big></font></td></tr>
+
+<tr><td bgcolor="#ee77aa"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl>
+<dt><font face="helvetica, arial"><a href="cv_event_data.html#CVEventData">CVEventData</a>
+</font></dt></dl>
+ <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="CVEventData">class <strong>CVEventData</strong></a></font></td></tr>
+
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>Stores&nbsp;the&nbsp;assorted&nbsp;faces&nbsp;and&nbsp;motion&nbsp;(shells)&nbsp;sent&nbsp;from&nbsp;the&nbsp;server.&nbsp;They<br>
+can&nbsp;be&nbsp;retrieved&nbsp;together,&nbsp;separately,&nbsp;and&nbsp;by&nbsp;which&nbsp;region&nbsp;of&nbsp;interest&nbsp;they<br>
+are&nbsp;contained&nbsp;in.<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+<dl><dt><a name="CVEventData-__init__"><strong>__init__</strong></a>(self, facesByRegion, shellsByRegion, numRoi)</dt></dl>
+
+<dl><dt><a name="CVEventData-__str__"><strong>__str__</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="CVEventData-getAllBlobs"><strong>getAllBlobs</strong></a>(self)</dt><dd><tt>@return&nbsp;all&nbsp;blobs&nbsp;(faces&nbsp;and&nbsp;shells)</tt></dd></dl>
+
+<dl><dt><a name="CVEventData-getAllFaces"><strong>getAllFaces</strong></a>(self)</dt><dd><tt>@return&nbsp;all&nbsp;faces</tt></dd></dl>
+
+<dl><dt><a name="CVEventData-getAllShells"><strong>getAllShells</strong></a>(self)</dt><dd><tt>@return&nbsp;all&nbsp;shells&nbsp;(motion)</tt></dd></dl>
+
+<dl><dt><a name="CVEventData-getBlobsInRegion"><strong>getBlobsInRegion</strong></a>(self, roi)</dt><dd><tt>@param&nbsp;roi&nbsp;&nbsp;the&nbsp;region&nbsp;of&nbsp;interest&nbsp;to&nbsp;return&nbsp;blobs&nbsp;for<br>
+@return&nbsp;the&nbsp;blobs&nbsp;in&nbsp;the&nbsp;given&nbsp;region</tt></dd></dl>
+
+<dl><dt><a name="CVEventData-getFacesInRegion"><strong>getFacesInRegion</strong></a>(self, roi)</dt><dd><tt>@param&nbsp;roi&nbsp;&nbsp;the&nbsp;region&nbsp;of&nbsp;interest&nbsp;to&nbsp;return&nbsp;faces&nbsp;for<br>
+@return&nbsp;the&nbsp;faces&nbsp;in&nbsp;the&nbsp;given&nbsp;region</tt></dd></dl>
+
+<dl><dt><a name="CVEventData-getNumRegionsOfInterest"><strong>getNumRegionsOfInterest</strong></a>(self)</dt><dd><tt>@return&nbsp;the&nbsp;number&nbsp;of&nbsp;regions&nbsp;of&nbsp;interest</tt></dd></dl>
+
+<dl><dt><a name="CVEventData-getShellsInRegion"><strong>getShellsInRegion</strong></a>(self, roi)</dt><dd><tt>@param&nbsp;roi&nbsp;&nbsp;the&nbsp;region&nbsp;of&nbsp;interest&nbsp;to&nbsp;return&nbsp;shells&nbsp;for<br>
+@return&nbsp;the&nbsp;shells&nbsp;in&nbsp;the&nbsp;given&nbsp;region</tt></dd></dl>
+
+</body></html>

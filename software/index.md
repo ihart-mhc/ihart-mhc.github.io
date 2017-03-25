@@ -8,7 +8,7 @@ title: Software
 
 [All existing server versions](https://github.com/ihart-mhc/ihart/releases) -- the latest release is the one with the highest number.
 
-Recently generated Python documentation documentation (for the server source code):
+Recently generated Python documentation (for the server source code):
 
 - [Server](/software/server.html)
 - [Data](/software/data.html)
