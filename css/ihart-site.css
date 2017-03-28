@@ -85,14 +85,14 @@ img {
     height: auto;
 }
 
-body.About img {
+body.about img {
 	width: 90%;
 	height: auto;
 	display: block; /* Center the images */
 	margin: auto;
 }
 
-body.Home p img {
+body.home p img {
 	width: 80%;
 	height: auto;
 	display: block; /* Center the images */
