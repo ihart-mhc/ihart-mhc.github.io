@@ -8,7 +8,7 @@
 <td valign=bottom>&nbsp;<br>
 <font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong>blob</strong></big></big></font></td
 ><td align=right valign=bottom
-><font color="#ffffff" face="helvetica, arial"><a href="ihart.html">index</a></font></td></tr></table>
+><font color="#ffffff" face="helvetica, arial"></font></td></tr></table>
     <p><tt>Models&nbsp;an&nbsp;instance&nbsp;of&nbsp;detected&nbsp;motion&nbsp;or&nbsp;a&nbsp;detected&nbsp;face.</tt></p>
 <p>
 <table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
@@ -29,18 +29,17 @@
 <tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
 <td colspan=2><tt>Stores&nbsp;the&nbsp;starting&nbsp;(leftX,&nbsp;topY)&nbsp;coordinates,&nbsp;width,&nbsp;and&nbsp;height&nbsp;of<br>
 either&nbsp;an&nbsp;area&nbsp;of&nbsp;motion&nbsp;or&nbsp;a&nbsp;face.&nbsp;Also&nbsp;stores&nbsp;the&nbsp;region&nbsp;of&nbsp;interest&nbsp;that<br>
-this&nbsp;blob&nbsp;occurred&nbsp;in.<br>&nbsp;</tt></td></tr>
+this&nbsp;blob&nbsp;occurred&nbsp;in.<br>
+&nbsp;<br>
+leftX:&nbsp;the&nbsp;starting&nbsp;x&nbsp;of&nbsp;the&nbsp;blob.<br>
+topY:&nbsp;the&nbsp;starting&nbsp;y&nbsp;of&nbsp;the&nbsp;blob.<br>
+width:&nbsp;the&nbsp;width&nbsp;of&nbsp;the&nbsp;blob.<br>
+height:&nbsp;the&nbsp;height&nbsp;of&nbsp;the&nbsp;blob.<br>
+roi:&nbsp;the&nbsp;region&nbsp;of&nbsp;interest&nbsp;this&nbsp;blob&nbsp;belongs&nbsp;to.<br>
+blob_type:&nbsp;the&nbsp;blob_type&nbsp;of&nbsp;event&nbsp;this&nbsp;blob&nbsp;represents&nbsp;(FACE&nbsp;or&nbsp;SHELL)<br>&nbsp;</tt></td></tr>
 <tr><td>&nbsp;</td>
 <td width="100%">Methods defined here:<br>
-<dl><dt><a name="Blob-__init__"><strong>__init__</strong></a>(self, leftX, topY, width, height, roi, type)</dt><dd><tt>Initializes&nbsp;all&nbsp;instance&nbsp;fields&nbsp;of&nbsp;<a href="#Blob">Blob</a>.<br>
-&nbsp;<br>
-@param&nbsp;leftX:&nbsp;the&nbsp;starting&nbsp;x&nbsp;of&nbsp;the&nbsp;blob.<br>
-@param&nbsp;topY:&nbsp;the&nbsp;starting&nbsp;y&nbsp;of&nbsp;the&nbsp;blob.<br>
-@param&nbsp;width:&nbsp;the&nbsp;width&nbsp;of&nbsp;the&nbsp;blob.<br>
-@param&nbsp;height:&nbsp;the&nbsp;height&nbsp;of&nbsp;the&nbsp;blob.<br>
-@param&nbsp;roi:&nbsp;the&nbsp;region&nbsp;of&nbsp;interest&nbsp;this&nbsp;blob&nbsp;belongs&nbsp;to.<br>
-@param&nbsp;type:&nbsp;the&nbsp;type&nbsp;of&nbsp;event&nbsp;this&nbsp;blob&nbsp;represents&nbsp;(FACE&nbsp;or&nbsp;SHELL)<br>
-@return:&nbsp;none</tt></dd></dl>
+<dl><dt><a name="Blob-__init__"><strong>__init__</strong></a>(self, leftX, topY, width, height, roi, blob_type)</dt></dl>
 
 <dl><dt><a name="Blob-__repr__"><strong>__repr__</strong></a> = <a href="#Blob-__str__">__str__</a>(self)</dt></dl>
 
@@ -51,6 +50,18 @@ Data and other attributes defined here:<br>
 <dl><dt><strong>FACE</strong> = 'Face'</dl>
 
 <dl><dt><strong>SHELL</strong> = 'Shell'</dl>
+
+<dl><dt><strong>blob_type</strong> = None</dl>
+
+<dl><dt><strong>height</strong> = None</dl>
+
+<dl><dt><strong>leftX</strong> = None</dl>
+
+<dl><dt><strong>roi</strong> = None</dl>
+
+<dl><dt><strong>topY</strong> = None</dl>
+
+<dl><dt><strong>width</strong> = None</dl>
 
 </td></tr></table></td></tr></table>
 </body></html>

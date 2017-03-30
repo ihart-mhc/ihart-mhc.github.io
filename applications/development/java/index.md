@@ -11,6 +11,8 @@ title: Java Application Development
 
 The full exported Javadocs for the iHart Java client library are available [here](doc).
 
+For more on how iHart works, see [this page](/software/#how-ihart-works).
+
 # Setup
 First, make sure you have downloaded the latest version of the iHart project from [this website](/ihart)
 (or [cloned the repository](https://github.com/ihart-mhc/ihart) from GitHub).
