@@ -4,9 +4,10 @@ title: Software
 
 # How to use iHart
 
+## Useful links
 [Known issues](/software/issues)
 
-[All existing server versions](https://github.com/ihart-mhc/ihart/releases) -- the latest release is the one with the highest number.
+[All existing server versions](https://github.com/ihart-mhc/ihart/releases) \-- the latest release is the one with the highest number.
 
 Recently generated Python documentation (for the server source code):
 
@@ -16,6 +17,8 @@ Recently generated Python documentation (for the server source code):
 - [Blob](/software/blob.html)
 - [SocketHandler](/software/socket_handler.html)
 - [Utility](/software/utility.html)
+
+See [this page](/software/autostart.html) for instructions on how to set up iHart for long-term displays.
 
 ## How iHart works
 iHart consists of two parts: the server and the client.

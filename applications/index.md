@@ -17,7 +17,7 @@ The current applications are in \"client -> apps\".
 
 **Flash applications:**
 
-From the application's folder, run the `.swf` file (OSX or Windows), or the `.app` file (OSX).
+From the application\'s folder, run the `.swf` file (OSX or Windows), or the `.app` file (OSX).
 
 *Note: Flash iHart applications will only run with server versions <= 2.3, as the Flash client library is being deprecated.*
 
@@ -31,7 +31,7 @@ sensing motion, try the [troubleshooting suggestions here](/applications/issues)
 
 **Python applications:**
 
-From the application's folder, run the main Python file as `python ___.py`. Depending on the application, there may be extra libraries to install,
+From the application\'s folder, run the main Python file as `python ___.py`. Depending on the application, there may be extra libraries to install,
 or an exported `.app` or `.exe` file that can be run.
 
 ## Examples of Current iHart Applications
