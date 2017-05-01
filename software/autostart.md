@@ -18,7 +18,7 @@ The script, `autostart.sh`, and its associated `autostart.config` configuration 
 The [`autostart.config` file](https://github.com/ihart-mhc/ihart/blob/master/bin/autostart.config) allows you to set preferences without
 modifying the script itself. Each variable is detailed below.
 
- - `OS_OSX` should be set to `true` if you are running on an OS X operationg system; if you are running on Windows, set this to `false`.
+ - `OS_OSX` should be set to `true` if you are running on an OS X operating system; if you are running on Windows, set this to `false`.
 This is used to determine which version of the server should be run.
 
  - `SERVERWAIT` defines a number of seconds to wait between when the server is started and when the app is started.

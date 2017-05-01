@@ -12,6 +12,7 @@ For more on how iHart works, see [this page](/software/#how-ihart-works).
 
 * [Setup](#setup)
 * [Development](#development-using-the-ihart-python-client-library)
+* [Exporting your app](#export-your-application)
 
 # Setup
 
@@ -117,3 +118,27 @@ by passing in the index of the region:
 - `getShellsInRegion(regionOfInterest)`
 
 All of these methods return lists of Blobs. The documentation for the `Blob` class is available [here](/applications/development/python/doc/blob.html).
+
+
+# Export your application
+One you are finished developing, we recommend using [Pyinstaller](http://www.pyinstaller.org/) to export your application to an easily-runnable format.
+
+## Accessing resources
+Your application will need to take Pyinstaller\'s export system into account when accessing external resources (eg, files). Instead of passing a local
+file path, use [this method](https://github.com/ihart-mhc/ihart/blob/master/server/src/utility.py) to find the path to a given resource:
+
+	import sys
+
+	def resource_path(resource):
+	    """
+	    Utility method to get absolute path to a resource
+	     (sometimes the current directory, sometimes the temp directory).
+	    @param resource the path to the resource from the location of this script
+	    @return absolute path to the resource
+	    """
+	    base_path = getattr(sys, "_MEIPASS", ".")
+	    return "/".join([base_path, resource])
+
+For example, to access a local file named `foo.jpg` in the folder with your Python file, use `resource_path("foo.jpg")` instead of just the file name.
+This method works because Pyinstaller [creates a temporary  folder that holds your bundled files, accessible via `sys._MEIPASS`](https://pyinstaller.readthedocs.io/en/stable/runtime-information.html#using-file-and-sys-meipass).
+This method also works when you are running from source, since the `getattr` method will return a default of `.`, for the current folder.

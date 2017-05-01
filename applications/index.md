@@ -34,6 +34,8 @@ sensing motion, try the [troubleshooting suggestions here](/applications/issues)
 From the application\'s folder, run the main Python file as `python ___.py`. Depending on the application, there may be extra libraries to install,
 or an exported `.app` or `.exe` file that can be run.
 
+See the [Python application development guide](/applications/development/python/) for more details.
+
 ## Examples of Current iHart Applications
 Bellow is a partial list of iHart applications. All of these applications (including source code) can be downloaded from [GitHub](https://github.com/ihart-mhc/ihart).
 
